@@ -5,17 +5,13 @@
 #         self.next = next
 class Solution(object):
     def getDecimalValue(self, head):
-        arr = []
         temp = head
-
-        while temp != None:
-            arr.append(temp.val)
-            temp = temp.next
-
         num = 0
 
-        for bit in arr:
-            num = num * 2 + bit
+        while temp:
+            num = num * 2 + temp.val
+            temp = temp.next
+
 
         return num
         
